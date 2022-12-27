@@ -33,8 +33,7 @@ streamlit.header("FruitLoad list contains")
 streamlit.dataframe(my_data_rows)
 
 add_my_fruit = streamlit.text_input('What fruit would you like to?','')
+streamlit.write('Thanks for adding ', add_my_fruit)
 my_cur.execute("use warehouse compute_wh")
 my_cur.execute("INSERT INTO fruit_load_list VALUES ('"+add_my_fruit+"')")
-streamlit.write('Thanks for adding ', add_my_fruit)
-
 
